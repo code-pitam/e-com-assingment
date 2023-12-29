@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  background-image: url("https://images.pexels.com/photos/1149019/pexels-photo-1149019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-box {
+  width: 500px;
+  height: 500px;
+  /* background-color: yellowgreen; */
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border: 5px solid white;
+  padding: 50px;
+}
+.login-box h1 {
+  margin: 30px;
+}
+form {
+  width: 100%;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+}
+.username {
+  /* background-color: white; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin: 20px; */
+}
+/* .container {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+} */
+label {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 5px;
+}
+input {
+  padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 2px solid rgb(0, 255, 106);
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
+  padding-left: 20px;
+}
+input:focus {
+  border: 2px solid orangered;
+}
+
+.button {
+  margin: 30px;
+  background: rgb(0, 255, 106);
+  color: orangered;
+}
+.button {
+  margin: 30px;
+  background: rgb(0, 255, 106);
+  color: black;
+  font-size: 25px;
+  font-weight: bolder;
+}
+.button:hover {
+  background: orangered;
+  color: greenyellow;
+}

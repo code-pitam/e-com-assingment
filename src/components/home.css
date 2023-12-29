@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  gap: 30px;
+margin-top: 50px;
+padding: 50px;
+  background-color: rgb(255, 255, 255);
+}
