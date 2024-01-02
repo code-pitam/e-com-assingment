@@ -1,32 +1,23 @@
-import { useEffect, useState } from "react";
-import Home from "./components/Home";
+import { useEffect } from "react";
 import Nav from "./components/Nav";
 import { Outlet } from "react-router-dom";
-import './App.css'
-import { ProductProvider } from "./components/context/ProductContext";
-
-
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProduct } from "./store/allProcuctSlice";
+import Cart from "./components/Cart";
 
 function App() {
-  const [ProductData, setProductData] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-   fetch("https://dummyjson.com/products")
-     .then((res) => res.json())
-     .then((res) => setProductData(res?.products));
-    // setPdata(Data)
-  
-    
-  }, [])
-      console.log(ProductData);
-
+    dispatch(fetchProduct());
+  }, []);
 
   return (
     <>
-      <ProductProvider value={{ ProductData }}>
-        <Nav />
-        <Outlet />
-      </ProductProvider>
+      <Nav />
+      <Outlet />
+      <Cart/>
 
       {/* <Login/> */}
     </>

@@ -1,30 +1,26 @@
-import React, { useContext, useEffect, useState } from 'react'
-import './home.css'
-import Card from './Card.'
-import Nav from './Nav'
-import { ProductContext } from './context/ProductContext'
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
+import "./home.css";
+import Card from "./Card.";
+import Nav from "./Nav";
 
 function Home() {
-    const [Produtd, setProdutd] = useState([])
-const productData = useContext(ProductContext)
-useEffect(() => {
-setProdutd(productData?.ProductData)
-console.log(productData);
+  const [Produtd, setProdutd] = useState([]);
 
- 
-}, [productData])
+  const data = useSelector((state) => state.products);
 
-console.log(Produtd);
+  useEffect(() => {
+    setProdutd(data.products);
+  }, [data]);
 
   return (
     <div className="container-home">
-      {Produtd.map((option) => (
-        <Card data={option}/>
+      {Produtd?.map((option) => (
+        <Card key={option.id} data={option} />
       ))}
-      {/* <Card /> */}
     </div>
   );
 }
 
-export default Home
+export default Home;

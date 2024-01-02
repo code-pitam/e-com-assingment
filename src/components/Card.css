@@ -50,3 +50,8 @@ padding:20px 20px ;
     font-weight: bold;
     color: black;
 }
+.c-active{
+  background-color: blue !important;
+  color: white !important;
+
+}
