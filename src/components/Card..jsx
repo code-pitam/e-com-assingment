@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Card.css";
 import { useDispatch } from "react-redux";
-import { addCart } from "../store/productSlice";
+import { addCart, addCartProduct } from "../store/productSlice";
 
 function Card({ data }) {
 const dispatch = useDispatch()
@@ -14,6 +14,7 @@ const [loding, setLoding] = useState(false)
     e.preventDefault();
     console.log("add to cart");
     dispatch(addCart({id: data?.id, price:data?.price}))
+    dispatch(addCartProduct());
     setLoding(true)
     setTimeout(() => {
       setLoding(false)

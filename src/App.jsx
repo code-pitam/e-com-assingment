@@ -17,7 +17,7 @@ function App() {
     <>
       <Nav />
       <Outlet />
-      <Cart/>
+      {/* <Cart/> */}
 
       {/* <Login/> */}
     </>
