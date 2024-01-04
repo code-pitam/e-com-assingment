@@ -66,10 +66,8 @@ console.log(FilterData);
             Product Picture
             {/* <img src={item.thumbnail} alt="" srcset="" /> */}
           </div>
-          <div className="name">{name}</div>
-          <div className="qty">qty</div>
+          <div className="name">Name</div>
           <div className="price">Price</div>
-          <div className="total-price">Total Price</div>
         </div>
         {FilterData?.map((item) => {
           return (
@@ -78,9 +76,7 @@ console.log(FilterData);
                 <img src={item?.thumbnail} alt="" srcset="" />
               </div>
               <div className="name">{item.title}</div>
-              <div className="qty">item</div>
               <div className="price">{item.price}</div>
-              <div className="total-price">Total Price</div>
             </div>
           );
         })}
